@@ -1,25 +1,26 @@
 #include <iostream>
+using namespace std;
 
 int main()
 {
     int workingHours;
-    int limitWokingHours = 6;
+    int limitWorkingHours = 6;
     int salary;
 
-    printf("Enter your working time : ");
-    scanf("%d",&workingHours);
-    printf("Your working hour is %d" " hours\n",workingHours);
+    cout << "Enter your working time : ";
+    cin >> workingHours;
+    cout << "Your working hour is " << workingHours << " hours\n";
 
-    if(workingHours > limitWokingHours) {
-        int otHours = workingHours - limitWokingHours;
-        salary = (workingHours-otHours) * (100) + (otHours * 200);
-        printf("Your overtime working hours is %d\n",otHours);
-        printf("Your salary is %d\n",salary);
+    if (workingHours > limitWorkingHours) {
+        int otHours = workingHours - limitWorkingHours;
+        salary = (workingHours - otHours) * 100 + (otHours * 200);
+        cout << "Your overtime working hours is " << otHours << "\n";
+        cout << "Your salary is " << salary << "\n";
     }
     else {
         salary = workingHours * 100;
-        printf("Your salary is %d\n",salary);
+        cout << "Your salary is " << salary << "\n";
     }
-    
+
     return 0;
 }
